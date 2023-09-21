@@ -19,15 +19,15 @@ class Google_Translator:
             text = f.read()
         return self.translate(text, lang)
 
-if __name__ == '__main__':
-    translator = Google_Translator()
+# if __name__ == '__main__':
+#     translator = Google_Translator()
 
-    # Select the option you want to use
+#     # Select the option you want to use
 
-    input_text = input('Press Enter to translate: ')
-    result = translator.translate(input_text, "ko")
+#     input_text = input('Press Enter to translate: ')
+#     result = translator.translate(input_text, "ko")
 
-    print('[{}] -> [{}]'.format(result['src_lang'], result['tgt_lang']))
-    print('=' * 50)
-    print('Source Text : {}'.format(result['src_text']))
-    print('Target Text : {}'.format(result['tgt_text']))
+#     print('[{}] -> [{}]'.format(result['src_lang'], result['tgt_lang']))
+#     print('=' * 50)
+#     print('Source Text : {}'.format(result['src_text']))
+#     print('Target Text : {}'.format(result['tgt_text']))

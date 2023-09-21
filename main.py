@@ -1,4 +1,5 @@
 import discord
+from google import Google_Translator
 from datetime import datetime
 
 TOKEN = ''
@@ -43,8 +44,23 @@ class MyClient(discord.Client):
         if trim_text in answer_dict.keys():
             return answer_dict[trim_text]
         else:
-            return text 
- 
+            if __name__ == '__main__':
+                translator = Google_Translator()
+
+                # Select the option you want to use
+
+                input_text = text
+
+
+                result = translator.translate(input_text, "ko")
+
+                print('[{}] -> [{}]'.format(result['src_lang'], result['tgt_lang']))
+                print('=' * 50)
+                print('Source Text : {}'.format(result['src_text']))
+                print('Target Text : {}'.format(result['tgt_text']))
+
+                return result['tgt_text']
+
 
 intents = discord.Intents.default()
 intents.message_content = True
