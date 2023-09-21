@@ -40,20 +40,10 @@ class MyClient(discord.Client):
             '시간': ':clock9: 현재 시간은 {}입니다.'.format(self.get_time()),
         }
  
-        if trim_text == '' or None:
-            return "알 수 없는 질의입니다. 답변을 드릴 수 없습니다."
-        elif trim_text in answer_dict.keys():
+        if trim_text in answer_dict.keys():
             return answer_dict[trim_text]
         else:
-            for key in answer_dict.keys():
-                if key.find(trim_text) != -1:
-                    return "연관 단어 [" + key + "]에 대한 답변입니다.\n" + answer_dict[key]
- 
-            for key in answer_dict.keys():
-                if answer_dict[key].find(text[1:]) != -1:
-                    return "질문과 가장 유사한 질문 [" + key + "]에 대한 답변이에요.\n" + answer_dict[key]
- 
-        return text + "은(는) 없는 질문입니다."
+            return text 
  
 
 intents = discord.Intents.default()
