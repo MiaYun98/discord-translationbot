@@ -19,7 +19,8 @@ class MyClient(discord.Client):
             await message.channel.send('pong {0.author.mention}'.format(message))
         else:
             answer = self.get_answer(message.content)
-            await message.channel.send(answer)
+            if answer: 
+                await message.channel.send(answer)
  
     def get_day_of_week(self):
         weekday_list = ['월요일', '화요일', '수요일', '목요일', '금요일', '토요일', '일요일']
@@ -51,15 +52,16 @@ class MyClient(discord.Client):
 
                 input_text = text
 
-
                 result = translator.translate(input_text, "ko")
 
-                print('[{}] -> [{}]'.format(result['src_lang'], result['tgt_lang']))
-                print('=' * 50)
-                print('Source Text : {}'.format(result['src_text']))
-                print('Target Text : {}'.format(result['tgt_text']))
-
-                return result['tgt_text']
+                if result['src_lang'] == 'ko': 
+                    return None 
+                else: 
+                    # print('[{}] -> [{}]'.format(result['src_lang'], result['tgt_lang']))
+                    # print('=' * 50)
+                    # print('Source Text : {}'.format(result['src_text']))
+                    # print('Target Text : {}'.format(result['tgt_text']))
+                    return result['tgt_text']
 
 
 intents = discord.Intents.default()

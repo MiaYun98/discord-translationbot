@@ -18,6 +18,8 @@ class Google_Translator:
         with open(file_path, 'r') as f:
             text = f.read()
         return self.translate(text, lang)
+    
+
 
 # if __name__ == '__main__':
 #     translator = Google_Translator()
