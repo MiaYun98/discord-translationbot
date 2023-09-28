@@ -1,7 +1,7 @@
 # discord-translationbot
 
 ## Description 
-
+This is a Python program for discord bot. It is still working on making it run 24/7. When you put this application into the server it automatically translates other languages into Korean. 
 
 ## User story 
 
