@@ -14,9 +14,11 @@ SO THAT I CAN GET ALONG EASIER
 ## Acceptance Criteria
 
 ```
-When
+When the user sends a message with a Korean
+It should not respond 
 
-When 
+When the user sends a message in different languages rather than Korean
+It should automatically translate and send a message in Korean 
 ```
 
 ## Language
