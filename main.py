@@ -2,8 +2,8 @@ import discord
 from google import Google_Translator
 from datetime import datetime
 
-TOKEN = ''
-CHANNEL_ID = ''
+TOKEN = 'MTE1Mzc3MDA0NjgyNTQzMTE4Mg.GDBmxI.e_fF0c2U6wa8hil5oZxPyooPOwu10-Cu_M1S3I'
+CHANNEL_ID = '796122268790423553'
  
  
 class MyClient(discord.Client):

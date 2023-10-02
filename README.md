@@ -34,7 +34,7 @@ This is a bot that you can use it in Discord
 
 
 ## App ScreenShot
-
+![Alt text](assets/example.png)
 
 ## Contact 
 
